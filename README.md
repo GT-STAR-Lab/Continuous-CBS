@@ -1,3 +1,11 @@
+To use this with Het-MAMP, first create a grid map (example can be seen in Examples/grid_map.xml). Then run generate_logs.sh with the following: 
+
+`bash <map_name> <task_name> <number_of_agents> <number_of_tasks> <config> `
+
+Where `<map_name>` is the grid map created, task name is the name of the task you are making (do not include .xml at the end of this), numer of agents is how many agents are navigating in a tasks, number of tasks is the number of MAPF tasks to be randomly created for the map, and config is the general config file you're using (an example of this is in Examples/config.xml).
+
+After that, you can copy all of the task logs created into the `VMAS/expert/logs` directory so they can be used by the expert.
+
 # Continuous-CBS
 Continuous CBS (CCBS) is a modification of the Conflict Based Search (CBS) algorithm, that supports actions (both move or wait) of arbitrary duration. CCBS is different from CBS in the way how conflicts and constraints are defined. To handle CCBS constraints the low-level search is inspired by Safe Interval Path Planning (SIPP) algorithm. More info about CCBS can be found at [IJCAI19 paper](https://www.ijcai.org/Proceedings/2019/0006.pdf).
 
